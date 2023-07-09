@@ -11,7 +11,7 @@ dotenv.config();
 app.use(cors());
 app.use("/message", MessagesRouter);
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 const URL = process.env.URL;
 
 mongoose.connect(URL).then(() => console.log("DB Connected !")).catch((err) => console.error(err));
