@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 dotenv.config();
 app.use(cors({
-    origin: '*'
+    origin: 'https://ravis-portfolio.netlify.app'
 }));
 app.use("/message", MessagesRouter);
 
