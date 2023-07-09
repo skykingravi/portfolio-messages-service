@@ -8,9 +8,7 @@ const app = express();
 
 app.use(express.json());
 dotenv.config();
-app.use(cors({
-    origin: 'https://ravis-portfolio.netlify.app'
-}));
+app.use(cors());
 app.use("/message", MessagesRouter);
 
 const PORT = process.env.PORT;
