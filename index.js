@@ -12,8 +12,9 @@ app.use(cors());
 app.use("/message", MessagesRouter);
 
 const PORT = process.env.PORT || 8080;
+const URL = process.env.URL;
 
-mongoose.connect(process.env.URL).then(() => console.log("DB Connected !")).catch((err) => console.error(err));
+mongoose.connect(URL).then(() => console.log("DB Connected !")).catch((err) => console.error(err));
 
 
 app.listen(PORT, () => {
